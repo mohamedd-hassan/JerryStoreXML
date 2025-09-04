@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JerryStoreXML</string>
+    <string name="header_description">Which Tom do you want to buy?</string>
+    <string name="header_title">Hi, Jerry 👋🏻</string>
+</resources>

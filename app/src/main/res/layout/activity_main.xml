@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:contentDescription=""
+            android:src="@drawable/jerry_pfp"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8.5dp"
+            android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+            android:text="@string/header_title"
+            android:textColor="@color/textDark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/profile_pic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+            android:text="@string/header_description"
+            android:textColor="@color/textLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <View
+            android:id="@+id/notification_outline"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/notification_box_shape"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toTopOf="@+id/title" />
+
+        <ImageView
+            android:id="@+id/notification_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription=""
+            android:src="@drawable/notification_icon"
+            app:layout_constraintBottom_toBottomOf="@id/notification_outline"
+            app:layout_constraintEnd_toEndOf="@+id/notification_outline"
+            app:layout_constraintStart_toStartOf="@id/notification_outline"
+            app:layout_constraintTop_toTopOf="@id/notification_outline" />
+
+        <View
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/search_box_shape"
+            app:layout_constraintEnd_toStartOf="@id/filter_button"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/profile_pic" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription=""
+            android:src="@drawable/search_normal"
+            app:layout_constraintBottom_toBottomOf="@id/search_bar"
+            app:layout_constraintStart_toStartOf="@id/search_bar"
+            app:layout_constraintTop_toTopOf="@id/search_bar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+            android:text="Search about tom ..."
+            android:textColor="@color/textThin"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/search_bar"
+            app:layout_constraintStart_toEndOf="@id/search_icon"
+            app:layout_constraintTop_toTopOf="@id/search_bar" />
+
+        <View
+            android:id="@+id/filter_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/filters_shape"
+            app:layout_constraintEnd_toStartOf="@id/guideline_end"
+            app:layout_constraintTop_toTopOf="@id/search_bar" />
+
+        <ImageView
+            android:id="@+id/filter_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription=""
+            android:src="@drawable/filters_icon"
+            app:layout_constraintBottom_toBottomOf="@id/filter_button"
+            app:layout_constraintEnd_toEndOf="@+id/filter_button"
+            app:layout_constraintStart_toStartOf="@id/filter_button"
+            app:layout_constraintTop_toTopOf="@id/filter_button" />
+
+        <View
+            android:id="@+id/promotional_banner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/promotion_banner"
+            app:layout_constraintEnd_toStartOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/search_bar" />
+
+        <TextView
+            android:id="@+id/promotional_banner_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+            android:text="Buy 1 Tom and get 2 for free"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/promotional_banner"
+            app:layout_constraintTop_toTopOf="@id/promotional_banner" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="0.8"
+            android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+            android:text="Adopt Tom! (Free Fail-Free Guarantee)"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/promotional_banner_title"
+            app:layout_constraintTop_toBottomOf="@id/promotional_banner_title" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription=""
+            android:src="@drawable/money_tom"
+            app:layout_constraintBottom_toBottomOf="@id/promotional_banner"
+            app:layout_constraintEnd_toEndOf="@id/promotional_banner" />
+
+        <TextView
+            android:id="@+id/section_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+            android:text="Cheap tom section"
+            android:textColor="@color/textDark"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/promotional_banner" />
+
+
+        <TextView
+            android:id="@+id/view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+            android:text="View all"
+            android:textColor="@color/brand"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/section_title"
+            app:layout_constraintEnd_toStartOf="@id/view_all_arrow"
+            app:layout_constraintTop_toTopOf="@id/section_title" />
+
+        <ImageView
+            android:id="@+id/view_all_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription=""
+            android:src="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/view_all"
+            app:layout_constraintEnd_toStartOf="@id/guideline_end"
+            app:layout_constraintTop_toTopOf="@id/view_all" />
+
+        <include layout="@layout/sport_tom"
+            android:id="@+id/sport_tom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintEnd_toStartOf="@id/lover_tom"
+            app:layout_constraintTop_toBottomOf="@id/section_title"/>
+
+        <include
+            layout="@layout/lover_tom"
+            android:id="@+id/lover_tom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/guideline_end"
+            app:layout_constraintStart_toEndOf="@id/sport_tom"
+            app:layout_constraintTop_toTopOf="@id/sport_tom"/>
+
+        <include layout="@layout/bomb_tom"
+            android:id="@+id/bomb_tom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintEnd_toStartOf="@id/spy_tom"
+            app:layout_constraintTop_toBottomOf="@id/sport_tom"/>
+
+        <include
+            layout="@layout/spy_tom"
+            android:id="@+id/spy_tom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/guideline_end"
+            app:layout_constraintStart_toEndOf="@id/bomb_tom"
+            app:layout_constraintTop_toTopOf="@id/bomb_tom"/>
+
+        <include layout="@layout/frozen_tom"
+            android:id="@+id/frozen_tom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintEnd_toStartOf="@id/sleeping_tom"
+            app:layout_constraintTop_toBottomOf="@id/bomb_tom"/>
+
+        <include
+            layout="@layout/sleeping_tom"
+            android:id="@+id/sleeping_tom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_end"
+            app:layout_constraintStart_toEndOf="@id/frozen_tom"
+            app:layout_constraintTop_toTopOf="@id/frozen_tom"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

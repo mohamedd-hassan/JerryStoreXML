@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="textDark">#1F1F1E</color>
+    <color name="outline">#261F1F1E</color>
+    <color name="textLight">#A5A6A4</color>
+    <color name="outlineLight">#14A5A6A4</color>
+    <color name="textThin">#969799</color>
+    <color name="brand">#03578A</color>
+</resources>
